@@ -14,6 +14,7 @@ Hugo is an open-source static site generator written in Go. It's designed for sp
 ### Why Static Sites?
 
 Static sites offer several advantages:
+
 - **Performance**: No database queries or server-side processing means lightning-fast page loads
 - **Security**: With no dynamic code execution, there's much less attack surface
 - **Simplicity**: Easy to version control, deploy, and maintain
