@@ -1,24 +1,21 @@
 {{ define "main" }}
-    {{/* Home page banner */}}
-    <div class="home-banner">
-        <img src="{{ .Site.BaseURL }}img/banner.jpg" alt="The Blue Beanie Banner" />
-    </div>
 
-    {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
-    {{ $notHidden := where .Site.RegularPages "Params.hidden" "!=" true }}
-    {{ $filtered := ($pages | intersect $notHidden) }}
-    {{ $pag := .Paginate ($filtered) }}
 
-    <section class="article-list">
-        {{ range $index, $element := $pag.Pages }}
-            {{ partial "article-list/default" . }}
-        {{ end }}
-    </section>
+{{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+{{ $notHidden := where .Site.RegularPages "Params.hidden" "!=" true }}
+{{ $filtered := ($pages | intersect $notHidden) }}
+{{ $pag := .Paginate ($filtered) }}
 
-    {{- partial "pagination.html" . -}}
-    {{- partial "footer/footer" . -}}
+<section class="article-list">
+    {{ range $index, $element := $pag.Pages }}
+    {{ partial "article-list/default" . }}
+    {{ end }}
+</section>
+
+{{- partial "pagination.html" . -}}
+{{- partial "footer/footer" . -}}
 {{ end }}
 
 {{ define "right-sidebar" }}
-    {{ partial "sidebar/right.html" (dict "Context" . "Scope" "homepage") }}
+{{ partial "sidebar/right.html" (dict "Context" . "Scope" "homepage") }}
 {{ end }}
