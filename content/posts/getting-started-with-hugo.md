@@ -45,7 +45,7 @@ A typical Hugo project has the following structure:
 - `layouts/` - HTML templates
 - `static/` - Static files (images, CSS, JS)
 - `themes/` - Themes directory
-- `config.toml` - Site configuration
+- `hugo.toml` - Site configuration
 
 ## Next Steps
 
