@@ -1,7 +1,7 @@
 baseURL = 'https://agilethief.github.io/HugoBlog/'
 languageCode = 'en-us'
 title = 'The Blue Beanie'
-theme = 'stack'
+googleAnalytics = ""
 
 [params]
   subtitle = "A blog powered by Hugo and hosted on GitHub Pages"
@@ -29,3 +29,7 @@ theme = 'stack'
   name = "Tags"
   url = "tags"
   weight = 3
+
+[module]
+  [[module.imports]]
+    path = "github.com/CaiJimmy/hugo-theme-stack/v3"
