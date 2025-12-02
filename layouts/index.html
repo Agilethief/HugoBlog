@@ -1,7 +1,7 @@
 {{ define "main" }}
     {{/* Home page banner */}}
-    <div class="home-banner" style="width: 100%; margin: 0 0 2rem 0; overflow: hidden; border-radius: var(--card-border-radius, 10px); box-shadow: var(--shadow-l1);">
-        <img src="{{ .Site.BaseURL }}img/banner.jpg" alt="The Blue Beanie Banner" style="width: 100%; height: auto; display: block; object-fit: cover;" />
+    <div class="home-banner">
+        <img src="{{ .Site.BaseURL }}img/banner.jpg" alt="The Blue Beanie Banner" />
     </div>
 
     {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
