@@ -1,7 +1,7 @@
 baseURL = 'https://agilethief.github.io/HugoBlog/'
 languageCode = 'en-us'
-title = 'HugoBlog'
-theme = 'BeautifulHugo'
+title = 'The Blue Beanie'
+theme = 'stack'
 
 [params]
   subtitle = "A blog powered by Hugo and hosted on GitHub Pages"
@@ -13,7 +13,7 @@ theme = 'BeautifulHugo'
   comments = false
 
 [author]
-  name = "Agilethief"
+  name = "The Blue Beanie"
 
 [[menu.main]]
   name = "Blog"
