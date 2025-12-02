@@ -1,33 +1,82 @@
 baseURL = 'https://agilethief.github.io/HugoBlog/'
 languageCode = 'en-us'
 title = 'The Blue Beanie'
-googleAnalytics = ""
+
+[services.googleAnalytics]
+  ID = ""
 
 [params]
-  subtitle = "A blog powered by Hugo and hosted on GitHub Pages"
-  logo = ""
+  mainSections = ["posts"]
+  featuredImageField = "image"
+  rssFullContent = true
   favicon = ""
-  dateFormat = "January 2, 2006"
-  commit = false
-  rss = true
-  comments = false
 
-[author]
-  name = "The Blue Beanie"
+  [params.footer]
+    since = 2024
+    customText = ""
+
+  [params.dateFormat]
+    published = "January 2, 2006"
+    lastUpdated = "January 2, 2006 15:04 MST"
+
+  [params.sidebar]
+    emoji = "🍥"
+    subtitle = "A blog powered by Hugo and hosted on GitHub Pages"
+    [params.sidebar.avatar]
+      enabled = false
+      local = true
+      src = "img/avatar.png"
+
+  [params.article]
+    math = false
+    toc = true
+    readingTime = true
+    [params.article.license]
+      enabled = false
+      default = "Licensed under CC BY-NC-SA 4.0"
+
+  [params.comments]
+    enabled = false
+    provider = "disqus"
+
+  [params.widgets]
+    homepage = []
+    page = []
+
+  [params.opengraph.twitter]
+    site = ""
+    card = "summary_large_image"
+
+  [params.defaultImage.opengraph]
+    enabled = false
+    local = false
+    src = ""
+
+  [params.colorScheme]
+    toggle = true
+    default = "auto"
+
+  [params.imageProcessing.cover]
+    enabled = true
+  [params.imageProcessing.content]
+    enabled = true
 
 [[menu.main]]
-  name = "Blog"
-  url = ""
+  identifier = "home"
+  name = "Home"
+  url = "/"
   weight = 1
 
 [[menu.main]]
+  identifier = "about"
   name = "About"
-  url = "about"
+  url = "/about"
   weight = 2
 
 [[menu.main]]
+  identifier = "tags"
   name = "Tags"
-  url = "tags"
+  url = "/tags"
   weight = 3
 
 [module]
