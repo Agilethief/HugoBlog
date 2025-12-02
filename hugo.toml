@@ -1,0 +1,31 @@
+baseURL = 'https://agilethief.github.io/HugoBlog/'
+languageCode = 'en-us'
+title = 'HugoBlog'
+theme = 'BeautifulHugo'
+
+[params]
+  subtitle = "A blog powered by Hugo and hosted on GitHub Pages"
+  logo = ""
+  favicon = ""
+  dateFormat = "January 2, 2006"
+  commit = false
+  rss = true
+  comments = false
+
+[author]
+  name = "Agilethief"
+
+[[menu.main]]
+  name = "Blog"
+  url = ""
+  weight = 1
+
+[[menu.main]]
+  name = "About"
+  url = "about"
+  weight = 2
+
+[[menu.main]]
+  name = "Tags"
+  url = "tags"
+  weight = 3
